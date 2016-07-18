@@ -33,16 +33,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <jdk.min.version>1.6</jdk.min.version>
-    <jetty.version>8.1.18.v20150929</jetty.version> <!-- we need jetty 8 because of java 1.6 compatibility -->
   </properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>org.apache.httpcomponents</groupId>
-      <artifactId>httpclient</artifactId>
-      <version>4.5.2</version>
-      <scope>compile</scope>
-    </dependency>
-  </dependencies>
 
 </project>
