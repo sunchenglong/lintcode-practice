@@ -1,4 +1,4 @@
-package com.sunchenglong.javalearn;
+package com.sunchenglong.thread;
 
 /**
  * Created by Administrator on 2016/7/18.
