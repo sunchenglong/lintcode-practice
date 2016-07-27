@@ -16,3 +16,7 @@ target/
 
 # OS X
 .DS_Store
+
+
+# Windows
+*.swp
