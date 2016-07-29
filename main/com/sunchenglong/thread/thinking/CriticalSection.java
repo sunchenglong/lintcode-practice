@@ -64,7 +64,7 @@ abstract class PairManager {
     private List<Pair> storage =
             Collections.synchronizedList(new ArrayList<Pair>());
 
-    public synchronized Pair getPair() {
+    public  synchronized Pair getPair() {
         return new Pair(p.getX(), p.getY());
     }
 
