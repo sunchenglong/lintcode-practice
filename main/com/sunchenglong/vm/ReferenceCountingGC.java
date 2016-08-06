@@ -15,7 +15,7 @@ public class ReferenceCountingGC {
         objB.instance = objA;
         objA = null;
         objB = null;
-        System.gc();
+        //System.gc();
 
     }
 
