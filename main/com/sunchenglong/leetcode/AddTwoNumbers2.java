@@ -3,7 +3,7 @@ package com.sunchenglong.leetcode;
 /**
  * Created by Administrator on 2016/8/9.
  */
-public class AddTwoNumbers {
+public class AddTwoNumbers2 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode dumpy = new ListNode(-1);
         dumpy.next = l1;
