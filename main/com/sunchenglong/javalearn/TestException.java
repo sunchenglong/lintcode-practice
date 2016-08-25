@@ -9,10 +9,12 @@ public class TestException {
 }
 class Test extends Inning implements IStorm {
 
+    @Override
     public void event() {}
 
     public Test() throws BaseballException {
     }
+
 
     public void rainHard() throws RainedOutChild {
 
