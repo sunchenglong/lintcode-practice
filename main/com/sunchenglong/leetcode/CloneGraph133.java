@@ -3,15 +3,28 @@ package com.sunchenglong.leetcode;
 import java.util.*;
 
 /**
- * Created by Administrator on 2016/8/16.
+ * Created by Chenglong Sun on 2016/8/16.
  */
 public class CloneGraph133 {
-    public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
-        Map<UndirectedGraphNode, ArrayList> map = new HashMap<UndirectedGraphNode, ArrayList>();
-        UndirectedGraphNode result = new UndirectedGraphNode(node.label);
-        Stack<UndirectedGraphNode> stack = new Stack<UndirectedGraphNode>();
+    private Map<Integer, UndirectedGraphNode> map = new HashMap<Integer, UndirectedGraphNode>();
 
-        return result;
+    public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
+        return DfsClone(node);
+    }
+
+    UndirectedGraphNode DfsClone(UndirectedGraphNode node) {
+        if (node == null) {
+            return null;
+        }
+        if(map.containsKey(node.label)) {
+            return map.get(node.label);
+        }
+        UndirectedGraphNode clone = new UndirectedGraphNode(node.label);
+        map.put(clone.label, clone);
+        for (UndirectedGraphNode neighbor : node.neighbors) {
+            clone.neighbors.add(DfsClone(neighbor));
+        }
+        return clone;
     }
 }
 
