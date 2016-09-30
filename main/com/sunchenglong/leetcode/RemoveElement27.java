@@ -3,28 +3,19 @@ package com.sunchenglong.leetcode;
 /**
  * Created by Chenglong Sun on 2016/8/9.
  */
-//// TODO: 2016/8/9 unfinished
 public class RemoveElement27 {
     public int removeElement(int[] nums, int val) {
-        int count = 0;
         int length = nums.length;
-        int pre = 0;
-        int post = 0;
-            while (post < length) {
-            if (nums[post] == val) {
-                pre = post;
-                post++;
-                count++;
-            } else {
-                nums[pre] = nums[post];
-                pre ++;
-                post++;
+        int num = 0;
+        for (int i = 0; i < length; i++) {
+            if(nums[i]!= val) {
+               nums[num++] = nums[i];
             }
         }
-        return count;
+        return num;
     }
 
     public static void main(String[] args) {
-
+        System.out.println(new RemoveElement27().removeElement(new int[]{3, 2, 2, 3}, 5));
     }
 }
