@@ -10,7 +10,7 @@ import java.util.Set;
 public class FirstMissingPositive41 {
     /**
      * 小心有重复的情况
-     * BitSey解决方法
+     * BitSet解决方法
      */
     /*
     public static int firstMissingPositive(int[] nums) {
