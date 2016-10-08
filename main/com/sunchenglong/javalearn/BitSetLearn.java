@@ -14,7 +14,15 @@ public class BitSetLearn {
         System.out.println("bitSet size:" + bitSet.size());
         bitSet.set(67);
         System.out.println("bitSet size:" + bitSet.size());
-        bitSet.set(320);
+        bitSet.set(124);
+        System.out.println("bitSet size:" + bitSet.size());
+        bitSet.set(386);
+        System.out.println(bitSet.toString());
+        int count = bitSet.nextSetBit(0);
+        while (count > 0) {
+            System.out.println(count);
+            count = bitSet.nextSetBit(count + 1);
+        }
         System.out.println("bitSet size:" + bitSet.size());
         System.out.println("The true numbers: " + bitSet.cardinality());
         System.out.println("The nextClearBit: " + bitSet.nextClearBit(0));
