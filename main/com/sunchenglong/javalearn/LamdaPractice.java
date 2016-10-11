@@ -35,8 +35,15 @@ public class LamdaPractice {
         System.out.println("Total of discounted prices: " + totalOfDiscountedPrices);
     }
 
+    public static void test1() {
+        List<String> list = Arrays.asList("first", "second", "third", "fourth", "fifth");
+        list.forEach(System.out::println);
+        list.forEach((str) -> System.out.println(str + " lamda"));
+    }
+
     public static void main(String[] args) {
         originFun();
         lamdaFun();
+        test1();
     }
 }
