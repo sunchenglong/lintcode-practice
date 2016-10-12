@@ -25,7 +25,6 @@ public class SocketServerBIO {
                 new BufferedOutputStream(socket.getOutputStream()));
 
         do {
-
             double length = dis.readDouble();
             System.out.println("服务器端收到的边长数据为：" + length);
             double result = length * length;
