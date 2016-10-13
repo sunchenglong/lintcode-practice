@@ -1,9 +1,10 @@
 package com.sunchenglong.leetcode;
 
+import com.sunchenglong.net.InetDemo01;
+
 /**
- * Created by Administrator on 2016/8/9.
+ * Created by Chenglong Sun on 2016/8/9.
  */
-//// TODO: 2016/8/9  00 To Discuss
 public class StringtoInteger8 {
     public int myAtoi(String str) {
         if (str == null || str.equals("")) return 0;
@@ -35,17 +36,15 @@ public class StringtoInteger8 {
         for (int i = start; i < length; i++) {
             if (chars[i] - 48 <= 9 && chars[i] - 48 >= 0) {
                 result = result * 10 + chars[i] - 48;
-                if (result > Integer.MAX_VALUE) return 0;
+                if (result * flag > Integer.MAX_VALUE || result * flag < Integer.MIN_VALUE)
+                    return flag > 0 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
             } else
-                return 0;
+                break;
         }
-        return Integer.parseInt(String.valueOf(result)) * flag;
+        return Integer.parseInt(String.valueOf(result * flag));
     }
 
     public static void main(String[] args) {
-        System.out.println(new StringtoInteger8().myAtoi("-09939930292905299999999"));
-        System.out.println(Integer.toBinaryString(68));
-        System.out.println(Integer.toBinaryString(64).matches("^1(00)*$"));
-        System.out.println(Integer.toBinaryString(2).matches("^1(0)*"));
+        System.out.println(new StringtoInteger8().myAtoi("11"));
     }
 }
