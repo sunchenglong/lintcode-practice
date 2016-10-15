@@ -1,5 +1,6 @@
 package com.sunchenglong.javalearn;
 
+import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.Map;
 
@@ -8,7 +9,7 @@ import java.util.Map;
  */
 public class MapLearn {
     public static void main(String[] args) {
-        Map<Integer,Integer> map= new Hashtable<>();
-
+        Map<Integer, Integer> map = new Hashtable<>();
+        Map<Integer, Integer> map2 = new HashMap<>();
     }
 }
