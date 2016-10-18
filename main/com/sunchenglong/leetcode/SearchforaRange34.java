@@ -1,4 +1,4 @@
-package com.sunchenglong.javalearn;
+package com.sunchenglong.leetcode;
 
 import java.util.Arrays;
 

@@ -1,6 +1,4 @@
-package com.sunchenglong.javalearn;
-
-import java.util.Arrays;
+package com.sunchenglong.leetcode;
 
 /**
  * Created by Chenglong Sun on 2016/10/11.

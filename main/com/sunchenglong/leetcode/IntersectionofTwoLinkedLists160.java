@@ -1,4 +1,4 @@
-package com.sunchenglong.javalearn;
+package com.sunchenglong.leetcode;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -20,15 +20,5 @@ public class IntersectionofTwoLinkedLists160 {
             headB = headB.next;
         }
         return null;
-    }
-}
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-        next = null;
     }
 }
