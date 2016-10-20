@@ -39,7 +39,7 @@ public class Interrupting2 {
         Thread thread = new Thread(new Blocked2());
         thread.start();
         TimeUnit.SECONDS.sleep(1);
-        System.out.println("Issuing t.interrupt()");
+        System.out.println("Issuing ConsecutiveNumbers180.interrupt()");
         thread.interrupt();
     }
 }
