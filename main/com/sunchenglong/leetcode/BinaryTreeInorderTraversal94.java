@@ -10,9 +10,9 @@ import java.util.Stack;
 public class BinaryTreeInorderTraversal94 {
 
     public List<Integer> inorderTraversal(TreeNode root) {
-        List<Integer> result = new LinkedList<Integer>();
+        List<Integer> result = new LinkedList<>();
         if (root == null) return result;
-        Stack<TreeNode> stack = new Stack<TreeNode>();
+        Stack<TreeNode> stack = new Stack<>();
         TreeNode current = root;
         while (current != null || !stack.isEmpty()) {
             while (current != null) {

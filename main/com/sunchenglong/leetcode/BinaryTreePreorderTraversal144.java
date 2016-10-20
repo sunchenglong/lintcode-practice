@@ -23,24 +23,26 @@ public class BinaryTreePreorderTraversal144 {
         return result;
     }
     */
+
+    /**
+     * Morris遍历
+     * @param root
+     * @return
+     */
     public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> result = new LinkedList<>();
         TreeNode cur = root;
-        TreeNode prev = new TreeNode(-1);
         while (cur != null) {
             if (cur.left == null) {
                 result.add(cur.val);
-                prev = cur;
                 cur = cur.right;
             } else {
                 TreeNode node = cur.left;
                 while (node.right != null && node.right != cur)
                     node = node.right;
-
                 if (node.right == null) {
                     result.add(cur.val);
                     node.right = cur;
-                    prev = cur;
                     cur = cur.left;
                 } else {
                     node.right = null;
